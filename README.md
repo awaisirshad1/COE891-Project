@@ -5,6 +5,10 @@ COE891 Final Project
 This project is a detailed testing of the `jsons` python library, using techniques like ISP, flow analysis (control and data), logic testing and mutation testing.
 
 ## Development Workflow
+1. Don't commit directly to main
+2. Raise PRs for your branch
+
+To get started:
 Clone the repo to your local machine.
 ```
  git clone <url-of-this-repo> 
