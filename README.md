@@ -33,4 +33,4 @@ Once you've done that, publish the branch to the remote repository:
 git push --set-upstream origin <your-branch-name-here>
 ```
 
-Now develop your test cases in your directory 
+Now develop your test cases in your directory and push to your branch. 
