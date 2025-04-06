@@ -1,0 +1,3 @@
+execute the commands in the cmd in the right directory:
+mut.py --target _common_impl --unit-test test_common_impl -m
+mut.py --target _load_impl --unit-test test_load_impl -m
