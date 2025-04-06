@@ -1,4 +1,10 @@
-certifi==2025.1.31
-mercurial==7.0
+iniconfig==2.1.0
+Jinja2==3.1.6
+jsons==1.6.3
+MarkupSafe==3.0.2
 packaging==24.2
-wheel @ file:///opt/homebrew/Cellar/python%403.13/3.13.2/libexec/wheel-0.45.1-py3-none-any.whl#sha256=b9235939e2096903717cb6bfc132267f8a7e46deb2ec3ef9c5e234ea301795d0
+pluggy==1.5.0
+pytest==8.3.5
+pytest-html==4.1.1
+pytest-metadata==3.1.1
+typish==1.9.3
