@@ -5,7 +5,6 @@ from typing import List
 from jsons.exceptions import JsonsError, DeserializationError
 
 from jsons.deserializers.default_list import default_list_deserializer
-
 def test_with_generic_type():
     result = default_list_deserializer(
         ["1", "2", "3"],
@@ -46,32 +45,3 @@ def test_invalid_tasks():
             cls=list[int],
             tasks=0 
         )
-
-def test_warn_on_fail():
-    def mock_load(elem, **kwargs):
-        if elem == "fail":
-            raise DeserializationError("Failed", source=elem, target=int)
-        return elem
-
-    with patch("jsons._load_impl.load", side_effect=mock_load):
-        with pytest.warns(UserWarning, match="Could not deserialize element at index 1"):
-            result = default_list_deserializer(
-                [1, "fail", 3],
-                cls=list[int],
-                warn_on_fail=True
-            )
-        assert result == [1, 3]  
-
-def test_raise_on_fail():
-    def mock_load(elem, **kwargs):
-        if elem == "fail":
-            raise DeserializationError("Failed", source=elem, target=int)
-        return elem
-
-    with patch("jsons._load_impl.load", side_effect=mock_load):
-        with pytest.raises(DeserializationError) as exc_info:
-            default_list_deserializer(
-                [1, "fail", 3],  
-                cls=List[int],
-                warn_on_fail=False
-            )

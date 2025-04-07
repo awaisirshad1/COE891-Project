@@ -1,7 +1,6 @@
 from typing import Dict
 from jsons.deserializers.default_dict import _load_hashed_keys, _deserialize
 
-# --- Tests for _load_hashed_keys ---
 def test_load_hashed_keys_with_stored_keys():
     obj = {"-keys": {"k1": "original"}, "k1": "value"}
     cls = Dict[str, str]
@@ -16,7 +15,6 @@ def test_load_hashed_keys_without_stored_keys():
     assert result == obj
     assert keys_were_hashed is False
 
-# --- Tests for _deserialize ---
 def test_deserialize_with_cls_args_and_unhashed_keys():
     obj = {"key": "1"}
     result = _deserialize(obj, (str, int), None, False, {})
