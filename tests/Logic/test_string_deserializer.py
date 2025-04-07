@@ -18,7 +18,6 @@ def test_datetime_parsing_failure():
     result = default_string_deserializer("not_a_datetime", cls=object)
     assert result == "not_a_datetime"  
 
-# Edge cases
 def test_empty_string():
     result = default_string_deserializer("", cls=str)
     assert result == ""
