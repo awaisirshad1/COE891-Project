@@ -1,6 +1,6 @@
 import pytest
 from collections import defaultdict
-from typing import DefaultDict, Dict
+from typing import DefaultDict
 from jsons.deserializers.default_defaultdict import default_defaultdict_deserializer  # Replace with your module name
 
 def test_non_parameterized_defaultdict():
